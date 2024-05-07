@@ -1,13 +1,13 @@
-# Sample workflow for running ESLint on push to the main branch
-#
-# To get started with ESLint see: https://eslint.org/docs/user-guide/getting-started
-#
-name: Run ESLint on Push to Main
+# # Sample workflow for running ESLint on push to the main branch
+# #
+# # To get started with ESLint see: https://eslint.org/docs/user-guide/getting-started
+# #
+# name: Run ESLint on Push to Main
 
-on:
-  # Run ESLint when pushing to the default branch
-  push:
-    branches: ["main"]
+# on:
+#   # Run ESLint when pushing to the default branch
+#   push:
+#     branches: ["main"]
 
 # jobs:
 #   # ESLint job
