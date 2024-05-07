@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 interface BlogPostProps {
-  title: string;
-  content: string;
+  title: string
+  content: string
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({ title, content }) => {
@@ -11,7 +11,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, content }) => {
       <h2 className="text-lg font-semibold mb-2">{title}</h2>
       <p>{content}</p>
     </div>
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost
