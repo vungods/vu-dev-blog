@@ -32,7 +32,7 @@ export default function Home() {
         <p className="font-sans hover:font-serif text-2xl text-gray-600 font-light">
           Blog Category
         </p>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-4">
           {blogPosts.map(post => (
             <BlogCategory key={post.id} title={post.title} content={post.content} />
           ))}
@@ -40,7 +40,7 @@ export default function Home() {
         <p className="font-sans hover:font-serif text-2xl text-gray-600 font-light">
         BookReview Category
         </p>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-4 gap-4">
           {bookReviews.map(post => (
             <BookReviewCategory key={post.id} title={post.title} content={post.content} />
           ))}
@@ -48,7 +48,7 @@ export default function Home() {
         <p className="font-sans hover:font-serif text-2xl text-gray-600 font-light">
         Development Category
         </p>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-4 gap-4">
           {developmentExperiences.map(post => (
             <DevelopmentExperienceCategory key={post.id} title={post.title} content={post.content} />
           ))}
