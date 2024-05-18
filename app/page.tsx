@@ -31,8 +31,8 @@ export default function Home() {
       </Head>
       <Header />
       <main className="flex flex-col items-center justify-top min-h-screen bg-gradient-to-r from-purple-950 to-black">
-        <h1 className="relative text-center font-ins text-[48px] text-primary drop-shadow-comeau-style-1 text-rose-900 font-bold mb-8 mt-8">Welcome to Vu-Dev Blog</h1>
-        <p className="font-serif relative text-center font-ins font-sans text-2xl text-gray-600 font-light mb-8">Blog Category</p>
+        <h1 className="text-center font-sans text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 py-4">Welcome to Vu-Dev Blog</h1>
+        <p className="font-serif relative font-ins items-start font-sans text-2xl text-white font-light mb-8">Blogs</p>
         {isLoading ? (
           <Loading /> // Render Loading component when data is loading
         ) : (
