@@ -1,19 +1,19 @@
-import React from 'react'
+import BlogPostInterface from '@/app/interfaces/BlogPost';
+import React from 'react';
 
-interface BlogPostProps {
-  title: string
-  content: string
-}
 
-const BlogCategory: React.FC<BlogPostProps> = ({ title, content }) => {
+const BlogCategory: React.FC<BlogPostInterface> = ({ title, content, image, date }) => {
   return (
-    <a href="#" className="block hover:bg-blue-200 p-4 rounded-lg">
-      <div className="border border-gray-300 p-4 rounded-lg">
-        <h2 className="text-lg font-semibold mb-2">{title}</h2>
-        <p>{content}</p>
+    <div className="flex flex-col bg-white rounded-lg overflow-hidden shadow-lg transition transform hover:translate-y-1 hover:shadow-xl">
+      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <div className="p-4 flex flex-col flex-grow">
+        <h2 className="text-xl font-semibold mb-2">{title}</h2>
+        <p className="text-gray-700 mb-4 line-clamp-3">{content}</p>
+        <p className="text-sm text-gray-500 mt-auto">{date}</p>
+        <a href="#" className="text-blue-500 hover:underline mt-4">Read More</a>
       </div>
-    </a>
+    </div>
   );
 };
 
-export default BlogCategory 
+export default BlogCategory;
