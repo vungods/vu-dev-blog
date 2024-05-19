@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogCategory from '../components/molecules/BlogPostPreview/BlogPost/BlogCategory'; 
+import BlogCategory from '../components/molecules/BlogPost/BlogCategory'; 
 
 const BlogPage = () => {
   const blogPosts = [

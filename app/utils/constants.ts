@@ -38,3 +38,16 @@ export const MOCK_DATA: BlogPostInterface[] = [
     date: '2024-05-15'
   },
 ];
+
+export const tutorialsOptions = [
+  { label: 'Amazon Web Services', href: 'amazon-web-services' },
+  { label: 'System Design', href: 'system-design' },
+  { label: 'Web Development', href: 'web-development' },
+  { label: 'Software Engineering', href: 'software-engineering' },
+  { label: 'Cloud Computing', href: 'cloud-computing' }, 
+  { label: 'Networking', href: 'networking' },
+  { label: 'Databases', href: 'databases' },
+  { label: 'Artificial Intelligence', href: 'artificial-intelligence' },
+  { label: 'Machine Learning', href: 'machine-learning' },
+  { label: 'Computer Vision', href: 'computer-vision' },
+];
