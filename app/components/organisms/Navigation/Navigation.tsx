@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import Dropdown from '../Dropdown/Dropdown'
+import { tutorialsOptions } from '@/app/utils/constants'
 
 const Navigation: React.FC = () => {
   return (
@@ -9,13 +11,13 @@ const Navigation: React.FC = () => {
           <Link href="/blogs">Blogs</Link>
         </li>
         <li className="text-white">
-          <Link href="/books">Book Reviews</Link>
-        </li>
-        <li className="text-white">
-          <Link href="/tutorials">Tutorials</Link>
+          <Dropdown name="Tutorials" options={tutorialsOptions} />
         </li>
         <li className="text-white">
           <Link href="/about">About</Link>
+        </li>
+        <li className="text-white">
+          <Link href="/login">Login</Link>
         </li>
       </ul>
     </nav>
