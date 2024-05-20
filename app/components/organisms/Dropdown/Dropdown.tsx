@@ -1,4 +1,5 @@
-import { useState } from 'react';
+"use client";
+import { useRef, useState, useEffect } from 'react';
 import DropdownItem from '../../atoms/DropdownItem/DropdownItem';
 
 type DropdownProps = {
@@ -8,13 +9,27 @@ type DropdownProps = {
 
 const Dropdown: React.FC<DropdownProps> = ({ options, name }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setIsOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
-        <div className="relative inline-block text-left overflow-visible">
+        <div className="relative inline-block text-left overflow-visible" ref={dropdownRef}>
             <div>
                 <button
                     type="button"
-                    className="inline-flex items-center w-full rounded-md shadow-sm text-sm  text-white"
+                    className="inline-flex items-center w-full rounded-md shadow-sm text-sm text-white"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {name}

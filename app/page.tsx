@@ -1,7 +1,5 @@
 "use client"
 import Head from 'next/head';
-import Header from './components/organisms/Header/Header';
-import Footer from './components/organisms/Footer/Footer';
 import BlogCategory from './components/molecules/BlogPost/BlogCategory';
 import { useEffect, useState } from 'react';
 import { MOCK_DATA } from './utils/constants';
@@ -26,7 +24,6 @@ export default function Home() {
         <title>Vu-Dev Blogs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
       <div className="area">
         <main className="bg-gradient-to-r from-purple-950 to-black">
           <div className="flex flex-col items-center justify-top min-h-screen">
@@ -42,7 +39,6 @@ export default function Home() {
               </div>
             )}
           </div>
-          <Footer />
         </main>
         <BGAnimation />
       </div>

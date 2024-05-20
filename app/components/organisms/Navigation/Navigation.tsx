@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Dropdown from '../Dropdown/Dropdown'
-import { tutorialsOptions } from '@/app/utils/constants'
+import { mmoOptions, tutorialsOptions } from '@/app/utils/constants'
 
 const Navigation: React.FC = () => {
   return (
@@ -14,10 +14,10 @@ const Navigation: React.FC = () => {
           <Dropdown name="Tutorials" options={tutorialsOptions} />
         </li>
         <li className="text-white">
-          <Link href="/about">About</Link>
+          <Dropdown name="Make Money" options={mmoOptions} />
         </li>
         <li className="text-white">
-          <Link href="/login">Login</Link>
+          <Link href="/about">About</Link>
         </li>
       </ul>
     </nav>

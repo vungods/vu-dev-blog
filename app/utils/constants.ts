@@ -51,3 +51,9 @@ export const tutorialsOptions = [
   { label: 'Machine Learning', href: 'machine-learning' },
   { label: 'Computer Vision', href: 'computer-vision' },
 ];
+
+
+export const mmoOptions = [
+  { label: 'Make Money: Youtube', href: 'mmo-youtube' },
+  { label: 'Make Money: Tiktok', href: 'mmo-tiktok' },
+];
